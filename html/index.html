@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banda Sinfónica Municipal De Garzón</title>
+    <!-- Vinculación del archivo CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!-- Fuente elegante de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Banda" class="logo-img">
+            <span>Banda San Miguel Arcángel</span>
+        </div>
+
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Abrir Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fotoyvideo.html">Fotos y Videos</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="proximoevento.html">Próximo evento</a></li>
+            <li><a href="contactenos.html">Contáctenos</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Sección de Inicio (Hero con imagen translúcida) -->
+    <section id="inicio" class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Banda Sinfónica Municipal De Garzón</h1>
+            <p class="subtitle">Excelencia musical y tradición que inspira a nuestra región</p>
+        </div>
+    </section>
+
+    <!-- Sección de Historia y Logro Reciente -->
+    <section class="historia-section">
+        <div class="container">
+            <h2>Nuestra Historia y Trayectoria</h2>
+            <p class="descripcion">
+                La Banda Sinfónica Municipal De Garzón ha sido un pilar cultural indispensable en nuestra comunidad, promoviendo el talento local, formando jóvenes músicos y llevando el arte musical a cada rincón de la región.
+            </p>
+            
+            <div class="logro-box">
+                <h3>🏆 Nuestro Último Logro</h3>
+                <p>
+                    Nos enorgullece haber obtenido el <strong>logro de estar entre las 10 mejores bandas a nivel departamental</strong>, un reconocimiento que resalta la disciplina, pasión y dedicación de cada uno de nuestros integrantes.
+                </p>
+            </div>
+
+            <!-- Carrusel automático con las imágenes locales -->
+            <div class="carousel-container">
+                <div class="carousel-slide">
+                    <img src="../assets/images/logro1.jpg" alt="Logro Banda 1" class="carousel-img active">
+                    <img src="../assets/images/logro2.jpg" alt="Logro Banda 2" class="carousel-img">
+                    <img src="../assets/images/logro3.jpg" alt="Logro Banda 3" class="carousel-img">
+                </div>
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vinculación del archivo JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+</html>

@@ -1,0 +1,304 @@
+@import url('./style.css');
+
+.evento-page {
+    padding-top: 120px;
+    padding-bottom: 5rem;
+    background-color: #0b1120;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+/* Layout de 2 Columnas */
+.evento-grid-layout {
+    display: grid;
+    grid-template-columns: 360px 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.evento-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+/* Estilos para el nombre del evento Retreta */
+.event-title-badge {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed rgba(212, 175, 55, 0.3);
+}
+
+.event-tag {
+    font-size: 0.75rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 0.3rem;
+}
+
+.event-name {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
+}
+
+/* --- 1. ESTILOS DEL CALENDARIO --- */
+.calendar-wrapper {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.calendar-header {
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    margin-bottom: 1rem;
+}
+
+.month-name {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.25rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.calendar-days-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    color: #94a3b8;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 0.6rem;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 6px;
+    text-align: center;
+}
+
+.day {
+    padding: 0.6rem 0;
+    color: #f8fafc;
+    font-size: 0.95rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+}
+
+.day.empty {
+    color: #475569;
+}
+
+/* Marcado especial para el 25 */
+.day.event-day {
+    background-color: #d4af37 !important;
+    color: #0f172a !important;
+    font-weight: 700;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.6);
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+}
+
+.calendar-footer {
+    margin-top: 1.2rem;
+    padding-top: 0.8rem;
+    border-top: 1px dashed rgba(212, 175, 55, 0.2);
+    font-size: 0.9rem;
+    color: #cbd5e1;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.badge-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #d4af37;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* --- 2. ESTILOS DEL RELOJ --- */
+.clock-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.clock-label {
+    font-size: 0.8rem;
+    color: #94a3b8;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.time-display {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 0.4rem;
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.3);
+}
+
+.ampm {
+    font-size: 1.2rem;
+    color: #cbd5e1;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.clock-subtext {
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    margin: 0;
+}
+
+/* --- 3. ESTILOS DEL MAPA Y CONTENEDOR DERECHO --- */
+.map-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.map-card-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.map-frame-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+/* Texto de ubicación abajo del mapa */
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #d4af37;
+    margin-bottom: 1.8rem;
+}
+
+.location-icon {
+    font-size: 1.8rem;
+}
+
+.location-text strong {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.location-text p {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* Responsivo para celulares */
+@media (max-width: 850px) {
+    .evento-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pantallas medianas y pequeñas (Tablets y Celulares) */
+@media (max-width: 868px) {
+    .evento-grid-layout {
+        grid-template-columns: 1fr; /* Cambia de 2 columnas a 1 sola */
+        gap: 2rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+
+    .time-display {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .evento-page {
+        padding-top: 100px;
+    }
+
+    .calendar-wrapper, .clock-card, .map-card {
+        padding: 1.2rem;
+    }
+
+    .day {
+        padding: 0.4rem 0;
+        font-size: 0.85rem;
+    }
+
+    .event-name {
+        font-size: 1.8rem;
+    }
+}

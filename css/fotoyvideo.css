@@ -1,0 +1,137 @@
+/* 1. Importación correcta: están en la misma carpeta css */
+@import url('./style.css');
+
+/* Estilos específicos para la página de Fotos y Videos */
+.media-page {
+    padding-top: 120px;
+    padding-bottom: 5rem;
+    background-color: #0b1120;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.page-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+.media-section {
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-family: 'Cinzel', serif;
+    color: #f8fafc;
+    font-size: 1.6rem;
+    margin-bottom: 1.8rem;
+    border-left: 3px solid #d4af37;
+    padding-left: 0.8rem;
+}
+
+/* Grilla de Videos */
+.videos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.video-card {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+}
+
+.video-wrapper {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background-color: #000;
+}
+
+.video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-info {
+    padding: 1.2rem;
+}
+
+.video-info h3 {
+    font-family: 'Cinzel', serif;
+    color: #f8fafc;
+    font-size: 1.15rem;
+    margin-bottom: 0.4rem;
+}
+
+.video-info p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+/* Grilla de Fotos */
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+}
+
+.photo-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    height: 230px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.photo-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(15, 23, 42, 0.85), transparent);
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.photo-overlay span {
+    color: #d4af37;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.photo-card:hover img {
+    transform: scale(1.08);
+}
+
+.photo-card:hover .photo-overlay {
+    opacity: 1;
+}

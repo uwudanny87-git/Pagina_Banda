@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotos y Videos - Banda Sinfónica Municipal De Garzón</title>
+    <!-- Vinculación del CSS general y el específico de esta página -->
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/fotoyvideo.css">
+    <!-- Fuente elegante de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="../assets/images/logo.png" alt="Logo Banda" class="logo-img">
+            <span>Banda San Miguel Arcángel</span>
+        </div>
+
+        <!-- Botón Hamburguesa para Móviles -->
+        <button class="hamburger-menu" id="hamburger-menu" aria-label="Abrir Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <ul class="nav-links" id="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="fotoyvideo.html">Fotos y Videos</a></li>
+            <li><a href="conocenos.html">Conócenos</a></li>
+            <li><a href="proximoevento.html">Próximo evento</a></li>
+            <li><a href="contactenos.html">Contáctenos</a></li>
+        </ul>
+    </nav>
+</header>
+
+    <!-- Contenido Principal -->
+    <main class="media-page">
+        <div class="container">
+
+
+            <!-- SUBSECCIÓN DE VIDEOS (3 videos organizados) -->
+            <section class="media-section">
+                <h2 class="section-title">🎬 Actuaciones Destacadas</h2>
+                <div class="videos-grid">
+                    <!-- Video 1 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="../assets/images/video1-portada.jpg">
+                                <source src="../assets/videos/video1.mp4" type="video/mp4">
+                                Tu navegador no soporta el reproductor de video.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Retreta</h3>
+                            <p>Interpretación especial en la tarima del parque principal</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 2 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="../assets/images/video2-portada.jpg">
+                                <source src="../assets/videos/video2.mp4" type="video/mp4">
+                                Tu navegador no soporta el reproductor de video.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Clasificaciones del Encuentro Departamental</h3>
+                            <p>Presentación que nos llevo a clasificar en el top 10 de las mejores bandas</p>
+                        </div>
+                    </div>
+
+                    <!-- Video 3 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="../assets/images/video3-portada.jpg">
+                                <source src="../assets/videos/video3.mp4" type="video/mp4">
+                                Tu navegador no soporta el reproductor de video.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Presentacion Semana Santa</h3>
+                            <p>Música compartida en vivo con la comunidad garzoneña.</p>
+                        </div>
+                    </div>
+                    <!-- Video 4 -->
+                    <div class="video-card">
+                        <div class="video-wrapper">
+                            <video controls poster="../assets/images/video4-portada.jpg">
+                                <source src="../assets/videos/video4.mp4" type="video/mp4">
+                                Tu navegador no soporta el reproductor de video.
+                            </video>
+                        </div>
+                        <div class="video-info">
+                            <h3>Otra parte de nuestra etreta</h3>
+                            <p>Interpretación especial en la tarima del parque principal</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SUBSECCIÓN DE FOTOS -->
+            <section class="media-section">
+                <h2 class="section-title">📸 Galería Fotográfica</h2>
+                <div class="photos-grid">
+                    <div class="photo-card">
+                        <img src="../assets/images/foto1.jpg" alt="Ensayo general">
+                        <div class="photo-overlay"><span>Ensayos generales.</span></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="../assets/images/foto2.jpg" alt="Concierto de gala">
+                        <div class="photo-overlay"><span>Concierto de gala.</span></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="../assets/images/foto3.jpg" alt="Sección de instrumentos">
+                        <div class="photo-overlay"><span>Con Inspiraciones para el corazon.</span></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="../assets/images/foto4.jpg" alt="Desfile cultural">
+                        <div class="photo-overlay"><span>Tocando para nuestro municipio.</span></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="../assets/images/foto5.jpg" alt="Premiación">
+                        <div class="photo-overlay"><span>Ceremonia de reconocimiento para nuestras esculas de formacion.</span></div>
+                    </div>
+                    <div class="photo-card">
+                        <img src="../assets/images/foto6.jpg" alt="Integrantes de la banda">
+                        <div class="photo-overlay"><span>Nuestra familia musical.</span></div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Vinculación del JavaScript específico -->
+    <script src="../js/fotoyvideo.js"></script>
+    <script src="../js/nav.js"></script>
+</body>
+</html>

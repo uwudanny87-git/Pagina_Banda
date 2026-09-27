@@ -1,0 +1,229 @@
+@import url('./style.css');
+
+.contacto-page {
+    padding-top: 120px;
+    padding-bottom: 5rem;
+    background-color: #0b1120;
+    min-height: 100vh;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.page-subtitle {
+    color: #94a3b8;
+    font-size: 1.05rem;
+}
+
+/* Layout Grid */
+.contacto-grid-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+.contacto-left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+/* 1. Tarjeta de Info Directa */
+.info-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.info-icon {
+    font-size: 2rem;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 0.8rem;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.info-details h3 {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.info-details p {
+    color: #f8fafc;
+    font-size: 1.05rem;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* 2. Tarjeta para Unirse / Integrante */
+.join-card {
+    background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(212, 175, 55, 0.5);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+    text-align: center;
+    position: relative;
+}
+
+.join-tag {
+    font-size: 0.75rem;
+    color: #d4af37;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.join-card h2 {
+    font-family: 'Cinzel', serif;
+    color: #f8fafc;
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.join-card p {
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1.8rem;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    width: 100%;
+    background-color: #25d366; /* Color representativo verde WhatsApp / resalta con el fondo */
+    color: #000;
+    font-weight: 700;
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    background-color: #20ba5a;
+    box-shadow: 0 6px 20px rgba(37, 211, 102, 0.5);
+}
+
+/* 3. Mapa y Ubicación */
+.map-card {
+    background: rgba(30, 41, 59, 0.7);
+    border: 1px solid rgba(212, 175, 55, 0.35);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.map-title {
+    font-family: 'Cinzel', serif;
+    color: #d4af37;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.map-frame-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.5rem;
+}
+
+.location-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(15, 23, 42, 0.6);
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    border-left: 4px solid #d4af37;
+    margin: 0;
+}
+
+.location-icon {
+    font-size: 1.8rem;
+}
+
+.location-text strong {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: block;
+}
+
+.location-text p {
+    color: #f8fafc;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Adaptación Celulares */
+@media (max-width: 850px) {
+    .contacto-grid-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Pantallas medianas y pequeñas (Tablets y Celulares) */
+@media (max-width: 868px) {
+    .contacto-grid-layout {
+        grid-template-columns: 1fr; /* Pasa de 2 columnas a 1 columna vertical */
+        gap: 2rem;
+    }
+
+    .page-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .contacto-page {
+        padding-top: 100px;
+    }
+
+    .info-card, .join-card, .map-card {
+        padding: 1.2rem;
+    }
+
+    .join-card h2 {
+        font-size: 1.3rem;
+    }
+
+    .location-info {
+        padding: 0.8rem 1rem;
+    }
+}
